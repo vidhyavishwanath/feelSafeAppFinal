@@ -1,16 +1,2 @@
-# feel_safe_app_final
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+FeelSafe
+Our app is one place that people can access and use when they feel like they are in danger, especially while walking alone or walking at night. Users can send pre written texts to their family members with one click, call the police with one click, fake a phone call, and find safe spaces — places where there tends to be more people, such as restaurants or shops, or maybe friend’s houses — as well as how to get there. Especially with an app emphasizing personal safety, we made sure to make the user’s data as secure as possible. It is difficult to gain access to the user’s data as it is stored locally.
