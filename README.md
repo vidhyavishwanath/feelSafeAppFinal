@@ -1,2 +1,2 @@
-FeelSafe
+FeelSafe - 
 Our app is one place that people can access and use when they feel like they are in danger, especially while walking alone or walking at night. Users can send pre written texts to their family members with one click, call the police with one click, fake a phone call, and find safe spaces — places where there tends to be more people, such as restaurants or shops, or maybe friend’s houses — as well as how to get there. Especially with an app emphasizing personal safety, we made sure to make the user’s data as secure as possible. It is difficult to gain access to the user’s data as it is stored locally.
