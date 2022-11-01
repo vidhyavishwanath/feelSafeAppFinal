@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sms/flutter_sms.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:url_launcher/url_launcher_string.dart';
 
 class Com {
   static void message(String text, List<String> recipients) async {
@@ -12,7 +17,7 @@ class Com {
   }
 
   static void call(String recipient){
-    launch("tel:$recipient");
+    launchUrlString("tel:$recipient");
   }
 }
 
@@ -22,8 +27,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeState extends State<HomeScreen> {
+  String appDocPath = "";
+  getPaths() async {
+    Directory appDocDir = await getApplicationDocumentsDirectory();
+    appDocPath = appDocDir.path;
+    setState(() {
+    });
+  }
+  getNumber() async {
+    File jsonFile = File(appDocPath + "/database.json");
+    Map<String, dynamic> jsonFileContent = json.decode(
+        jsonFile.readAsStringSync());
+    String phoneNumber = jsonFileContent["contact1Number"];
+    return phoneNumber;
+  }
   @override
-
   Widget build (BuildContext context){
     return Scaffold(
       appBar: AppBar(
@@ -49,7 +67,7 @@ class _HomeState extends State<HomeScreen> {
             Center(
               child: TextButton(
                   onPressed: (){
-                    Com.message("Help me, I'm being followed", ['6692468844']);
+                    Com.message("Help me, I'm being followed", [getNumber()]);
                   },
                   style: TextButton.styleFrom(
                     backgroundColor: Color(0XFFFF8080),
